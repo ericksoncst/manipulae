@@ -3,14 +3,15 @@ import Link from "next/link";
 import styled from "styled-components";
 import { HiOutlineMenu } from 'react-icons/hi';
 import { RiCloseLine } from 'react-icons/ri';
+import { AiFillHome } from "react-icons/ai";
+import { FaHeart } from "react-icons/fa";
 
 export const LogoWrapper = styled.div`
     display: none; 
     padding-left: 1rem;
     padding-right: 1rem; 
-    padding-bottom: 2.5rem; 
     flex-direction: column; 
-    width: 240px;
+    width: 220px;
 
     @media (min-width: 768px) { 
         display: flex; 
@@ -25,20 +26,18 @@ export const LogoImage = styled(Image)`
 
 export const StyledLink = styled(Link)`
     display: flex; 
-    margin-top: 2rem;
     margin-bottom: 2rem; 
     margin-left: 2rem;
     flex-direction: row; 
     justify-content: flex-start; 
     align-items: center; 
-    font-size: 0.875rem;
-    line-height: 1.25rem; 
-    font-weight: 500; 
-    color: #9CA3AF; 
+    font-size: 18px;
+    font-weight: 700; 
+    color: #000; 
+    text-decoration: none;
 `
 
 export const NavWrapper = styled.div`
-    margin-top: 2.5rem; 
 `
 
 export const Menu = styled.div`
@@ -53,19 +52,35 @@ export const Menu = styled.div`
     }
 `
 
-export const StyledHiOutlineMenu = styled(HiOutlineMenu)`
+export const StyledAiFillHome = styled(AiFillHome)`
     margin-right: 0.5rem; 
     width: 1.5rem; 
     height: 1.5rem; 
-    color: #cecece; 
+    color: #000; 
 `
+
 
 export const StyledRiCloseLine = styled(RiCloseLine)`
     margin-right: 0.5rem; 
     width: 1.5rem; 
     height: 1.5rem; 
-    color: #cecece; 
+    color: #000; 
 
+`
+
+export const StyledHiOutlineMenu = styled(HiOutlineMenu)`
+    margin-right: 0.5rem; 
+    width: 1.5rem; 
+    height: 1.5rem; 
+    color: #000; 
+`
+
+
+export const StyledFaHeart = styled(FaHeart)`
+    margin-right: 0.5rem; 
+    width: 1.5rem; 
+    height: 1.5rem; 
+    color: #000; 
 `
 
 export const MenuMobile = styled.div<{isOpened: boolean}>`

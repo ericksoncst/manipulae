@@ -1,9 +1,7 @@
 import React from "react"
 import Sidebar from "../components/Sidebar"
 import styled from "styled-components"
-import { useGetTopChartsQuery } from "redux/services/deezerCore"
-import { ChartsResponse } from "types/response"
-
+import Discovery from "views/Discovery"
 
 const Wrapper = styled.div`
     display: flex;
@@ -11,19 +9,13 @@ const Wrapper = styled.div`
 `
 
 
-function Discovery() {
-    const response:ChartsResponse = useGetTopChartsQuery({})
-
-
-
-
-    console.log('data', response.data)
-
+function Home() {
     return (
             <Wrapper>
                 <Sidebar/>
+                <Discovery />
             </Wrapper>
     )
 }
 
-export default Discovery
+export default Home

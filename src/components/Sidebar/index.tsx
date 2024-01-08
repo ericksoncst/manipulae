@@ -13,8 +13,12 @@ const Sidebar = () => {
       <S.LogoWrapper>
       <S.LogoImage src={logo} alt='logo' priority />
       <S.NavWrapper>
-       <S.StyledLink href={'/'} >Home</S.StyledLink>
-       <S.StyledLink href={'/favorites'} >Favorites</S.StyledLink>
+       <S.StyledLink href={'/'} >
+        <S.StyledAiFillHome />
+        Início</S.StyledLink>
+       <S.StyledLink href={'/favorites'} >
+       <S.StyledFaHeart />
+        Favoritos</S.StyledLink>
       </S.NavWrapper>
       </S.LogoWrapper>
       <S.Menu>
@@ -23,8 +27,12 @@ const Sidebar = () => {
       </S.Menu>
       <S.MenuMobile isOpened={mobileMenuOpen}>
         <S.LogoImage src={logo} alt='logo' priority />
-        <S.StyledLink href={'/'} >Home</S.StyledLink>
-        <S.StyledLink href={'/favorites'} onClick={() => setMobileMenuOpen(false)} >Favorites</S.StyledLink>
+        <S.StyledLink href={'/'} >
+        <S.StyledAiFillHome />
+          Início</S.StyledLink>
+        <S.StyledLink href={'/favorites'} onClick={() => setMobileMenuOpen(false)} >
+        <S.StyledAiFillHome />
+          Favoritos</S.StyledLink>
       </S.MenuMobile>
       </>
   );
