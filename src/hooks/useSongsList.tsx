@@ -7,6 +7,10 @@ export default function useSongsList({
     activeSong,
     isPlaying,
     data,
+}: {
+    activeSong: any,
+    isPlaying: boolean,
+    data: []
 }) {
     return (<SongCardWrapper>
         {

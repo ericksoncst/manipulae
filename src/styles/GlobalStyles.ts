@@ -5,7 +5,6 @@ const styles = css`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    letter-spacing: 1px;
   }
 `;
 
