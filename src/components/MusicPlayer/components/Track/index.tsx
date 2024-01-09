@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from './style'
 import logo from '../../../../assets/deezer-circle.png'
+import Image from "next/image";
 
 type TrackProps = {
     isPlaying: boolean | false;
@@ -12,9 +13,13 @@ type TrackProps = {
 export default function Track({ isPlaying, isActive, activeSong }: TrackProps) {
     return (
         <S.TrackWrapper>
-            <S.ActiveSong isActive isPlaying>
-                {/* <S.ActiveSongCover src={activeSong?.cover} /> */}
-                <S.ActiveSongCover src={logo} alt="Active song" width={60} height={60}/>
+            <S.ActiveSong isActive={isActive} isPlaying={isPlaying}>
+                {
+                    activeSong?.album?.cover_small ?
+                    <S.ActiveSongCover src={activeSong?.album?.cover_medium} alt="Active song" /> :
+                    <Image src={logo} alt="Active song" height={60} width={60} />
+
+                }
             </S.ActiveSong>
             <S.SongTitleContainer>
                <S.SongTitle>

@@ -19,8 +19,10 @@ export const ActiveSong = styled.div<{isActive: boolean, isPlaying: boolean}>`
     }
 `
 
-export const ActiveSongCover = styled(Image)`
+export const ActiveSongCover = styled.img`
     border-radius: 50px;  
+    width: 60px;
+    height: 60px;
 `
 
 export const SongTitleContainer = styled.div`
@@ -28,12 +30,11 @@ export const SongTitleContainer = styled.div`
 `
 
 export const SongTitle = styled.span`
-    font-size: 1.125rem;
+    font-size: 14px;
     line-height: 1.75rem; 
     font-weight: 700; 
     color: #000; 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; 
-    letter-spacing: 1px;
 `

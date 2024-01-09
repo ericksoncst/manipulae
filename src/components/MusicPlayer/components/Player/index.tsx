@@ -1,16 +1,29 @@
 import React, { useRef, useEffect } from 'react';
 
 
+type PlayerProps = {
+  activeSong: any;
+  isPlaying: boolean;
+  volume: number;
+  seekTime: number;
+  onEnded: () => void;
+  onTimeUpdate:  () => void;
+  onLoadedData: () => void;
+  repeat: boolean
+}
+
 export function Player({
     activeSong, isPlaying, volume=1, seekTime = 0, onEnded, onTimeUpdate, onLoadedData, repeat
-}) {
+}: PlayerProps) {
+
+
     const ref = useRef(null);
 
     if (ref.current) {
         if (isPlaying) {
-          ref.current.play();
+          ref.current?.play();
         } else {
-          ref.current.pause();
+          ref.current?.pause();
         }
       }
 
@@ -24,7 +37,7 @@ export function Player({
     //TODO: GET PLAY SRC
     return (
         <audio
-            src={activeSong?.hub?.actions[1]?.uri}
+            src={activeSong?.preview}
             ref={ref}
             loop={repeat}
             onEnded={onEnded}

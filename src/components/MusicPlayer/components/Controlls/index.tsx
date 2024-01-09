@@ -3,10 +3,11 @@ import * as S from './style'
 
 type ControllsProps = {
     isPlaying: boolean;
+    isActive: boolean;
     repeat: boolean,
-    setRepeat: () => void;
+    setRepeat: boolean;
      shuffle: boolean; 
-     setShuffle: () => void;
+     setShuffle: boolean;
     currentSongs: [];
     handlePlayPause: () => void;
      handlePrevSong:  () => void;
