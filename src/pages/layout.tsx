@@ -3,6 +3,7 @@ import StyledComponentsRegistry from '../lib/registry'
 import GlobalStyles from '../styles/GlobalStyles';
 import { ThemeProvider } from 'styled-components'
 
+
 export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <html>

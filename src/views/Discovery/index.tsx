@@ -1,27 +1,30 @@
-import React from "react";
+'use-client'
+
+import React, { useEffect, useState } from "react";
 import * as S from './style'
-import { useGetTopChartsQuery } from "redux/services/deezerCore";
 import { useSelector } from "react-redux";
 import useSongsList from "hooks/useSongsList";
+import Loader from "components/Loader";
 
-export default function Discovery() {
+export default function Discovery({data, loading = false}: { data: any, loading: boolean }) {
 
     const { activeSong, isPlaying } = useSelector((state) => state.player);
 
-    const {data} = useGetTopChartsQuery({})
-    const bestTracks = data?.tracks?.data;
+
+    if(loading) return <Loader /> 
 
     return (
         <S.MainContainer>
             <S.SongCardWrapper>
                 {
-                    useSongsList({
+                    !!data && useSongsList({
                         activeSong,
                         isPlaying,
-                        data: bestTracks
+                        data
                     })
                 }
             </S.SongCardWrapper>        
+            
         </S.MainContainer>
     )
 }

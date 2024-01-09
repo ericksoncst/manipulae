@@ -12,10 +12,11 @@ export const deezerCoreApi = createApi({
   }),
   endpoints: (builder) => ({
     getTopCharts: builder.query({ query: () => '/api/v1/get-charts' }),
-
+    getSongsBySearch: builder.query({ query: (searchTerm) => `/api/v1/search/${searchTerm}` }),
   }),
 });
 
 export const {
   useGetTopChartsQuery,
+  useGetSongsBySearchQuery,
 } = deezerCoreApi;
