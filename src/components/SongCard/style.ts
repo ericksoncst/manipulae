@@ -9,14 +9,14 @@ export const Container = styled.div`
     --bg-opacity: 0.8; 
     cursor: pointer; 
     backdrop-blur: blur(4px); 
-    width: 180px;
+    width: 250px;
 
 `
 
 export const PlayPauseWrapper = styled.div`
     position: relative; 
     width: 100%; 
-    height: 12rem; 
+    height: 14rem; 
 `
 
 //TODO: change Style
@@ -58,12 +58,12 @@ export const ArtitsName = styled.span`
     color: #000; 
     overflow: hidden;
     white-space: nowrap; 
+    letter-spacing: 1px;
 `
 
 export const SongTitle = styled.span`
     font-size: 12px;
-    font-weight: 600; 
-    color: #000; 
+    color: #A9A9A9; 
     overflow: hidden;
     white-space: nowrap; 
 `

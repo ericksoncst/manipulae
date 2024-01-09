@@ -35,6 +35,7 @@ export const StyledLink = styled(Link)`
     font-weight: 700; 
     color: #000; 
     text-decoration: none;
+    letter-spacing: 1px;
 `
 
 export const NavWrapper = styled.div`
@@ -91,7 +92,6 @@ export const MenuMobile = styled.div<{isOpened: boolean}>`
     padding: 1.5rem; 
     width: 66.666667%; 
     height: 100vh; 
-    background-image: background-image: linear-gradient(to top left, var(--tw-gradient-stops)); 
     backdrop-blur: blur(16px); 
 
 

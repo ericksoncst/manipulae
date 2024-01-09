@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
     display: flex; 
     flex-direction: column; 
-    width: 80%;
 `
 
 export const SongCardWrapper = styled.div`
