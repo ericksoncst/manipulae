@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaHeart } from "react-icons/fa";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -66,4 +67,12 @@ export const SongTitle = styled.span`
     color: #A9A9A9; 
     overflow: hidden;
     white-space: nowrap; 
+`
+
+export const StyledFaHeart = styled(FaHeart).attrs({
+    color: props => props.color
+})`
+    margin-right: 0.5rem; 
+    width: 1.5rem; 
+    height: 1.5rem; 
 `

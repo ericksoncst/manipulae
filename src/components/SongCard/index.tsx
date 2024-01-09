@@ -1,11 +1,12 @@
 import React from "react"
 import * as S from './style'
 import PlayPause from "components/PlayPause"
-import { useDispatch } from "react-redux";
-import { playPause, setActiveSong } from "redux/features/playerSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { playPause, setActiveSong, setFavorite } from "redux/features/playerSlice";
 
-export const SongCard = ({song, isPlaying, activeSong, data, i }) => {
+export const SongCard = ({song, isPlaying, activeSong,isFavorite, data, i }) => {
 
+    const { favorites } = useSelector(state => state?.player);
 
     const dispatch = useDispatch();
 
@@ -17,6 +18,16 @@ export const SongCard = ({song, isPlaying, activeSong, data, i }) => {
       dispatch(setActiveSong({ song, data, i }));
       dispatch(playPause(true));
     };
+
+    const saveToFavorites = () => {
+        const newArr = [...favorites]
+        const index = favorites.indexOf(song);
+        if (index > -1) { 
+            newArr.splice(song, 1)
+        } else newArr.push(song)
+        
+        dispatch(setFavorite([...newArr]))
+    }
 
     return (
         <S.Container>
@@ -33,7 +44,7 @@ export const SongCard = ({song, isPlaying, activeSong, data, i }) => {
                 <S.AlbumCover src={song?.album?.cover_medium} alt=""  />
             </S.PlayPauseWrapper>
             <S.InfoContainer >
-
+            <S.StyledFaHeart color={isFavorite ? '#CECECE' : '#000'} onClick={saveToFavorites} />
             <S.ArtitsName>
                     {song?.artist?.name}
             </S.ArtitsName>

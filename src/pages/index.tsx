@@ -4,6 +4,7 @@ import Discovery from "views/Discovery"
 import * as S from './style'
 import SearchBar from "components/SearchBar"
 import { useGetTopChartsQuery } from "redux/services/deezerCore"
+import { useSelector } from "react-redux"
 
 
 function Home() {

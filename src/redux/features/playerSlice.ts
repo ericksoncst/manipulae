@@ -6,6 +6,7 @@ const initialState = {
   isActive: false,
   isPlaying: false,
   activeSong: {},
+  favorites: []
 };
 
 const playerSlice = createSlice({
@@ -49,9 +50,12 @@ const playerSlice = createSlice({
       state.isPlaying = action.payload;
     },
 
+    setFavorite: (state, action) => {      
+      state.favorites = action.payload
+    }
   },
 });
 
-export const { setActiveSong, nextSong, prevSong, playPause } = playerSlice.actions;
+export const { setActiveSong, nextSong, prevSong, playPause, setFavorite } = playerSlice.actions;
 
 export default playerSlice.reducer;
