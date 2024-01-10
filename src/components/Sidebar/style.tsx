@@ -6,6 +6,10 @@ import { RiCloseLine } from 'react-icons/ri';
 import { AiFillHome } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
 
+export const Container = styled.div`
+    height: 100vh;
+`
+
 export const LogoWrapper = styled.div`
     display: none; 
     padding-left: 1rem;
@@ -93,10 +97,12 @@ export const MenuMobile = styled.div<{isOpened: boolean}>`
     width: 66.666667%; 
     height: 100vh; 
     backdrop-blur: blur(16px); 
+    background-color: #E6BDF5;
+
 
 
     @media (min-width: 768px) { 
-    display: none; 
+        display: none; 
     }
 
 `
