@@ -5,7 +5,7 @@ type ControllsProps = {
     isPlaying: boolean;
     isActive: boolean;
     repeat: boolean,
-    setRepeat: boolean;
+    setRepeat: ()=> boolean;
      shuffle: boolean; 
      setShuffle: ()=> boolean;
     currentSongs: [];

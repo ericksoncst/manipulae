@@ -69,9 +69,9 @@ export const SongTitle = styled.span`
     white-space: nowrap; 
 `
 
-export const StyledFaHeart = styled(FaHeart).attrs({
-    color: props => props.color
-})`
+export const StyledFaHeart = styled(FaHeart).attrs(({ color }) => ({
+    color:  color || "#CECECE"
+  }))`
     margin-right: 0.5rem; 
     width: 1.5rem; 
     height: 1.5rem; 

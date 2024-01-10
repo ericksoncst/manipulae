@@ -2,7 +2,6 @@ import React from "react";
 import { SongCard } from "components/SongCard";
 import styled from "styled-components";
 
-
 export default function useSongsList({
     activeSong,
     isPlaying,
@@ -12,18 +11,27 @@ export default function useSongsList({
     isPlaying: boolean,
     data: []
 }) {
-    return (<SongCardWrapper>
-        {
-            data?.map((song, i) => 
-            <SongCard
-            activeSong={activeSong}
-            isPlaying={isPlaying}
-            data={data}
-            i={i}
-            song={song}/>
-        )
+
+
+
+    
+
+    return <SongCardWrapper>
+    {
+        data?.map((song, i) => {
+
+            return (
+                <SongCard
+                    activeSong={activeSong}
+                    isPlaying={isPlaying}
+                    data={data}
+                    i={i}
+                    song={song}/>
+            )
         }
-    </SongCardWrapper>)
+    )
+    }
+</SongCardWrapper>
 }
 
 const SongCardWrapper = styled.div`

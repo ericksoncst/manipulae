@@ -12,6 +12,9 @@ export const MainContainer = styled.div`
     height: 7rem; 
     backdrop-blur: blur(16px); 
     background-color: #F4ECF7;
+    @media (max-width: 640px) { 
+        display: none;
+    }
 `
 
 export const ContentContainer = styled.div`
