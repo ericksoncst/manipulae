@@ -3,8 +3,12 @@ import React , { useState } from 'react';
 
 import * as S from './style';
 import logo from '../../assets/deezer.svg'
+import { useRouter } from 'next/router';
 
 const Sidebar = () => {
+
+  const route = useRouter()
+  
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -13,11 +17,11 @@ const Sidebar = () => {
       <S.LogoWrapper>
       <S.LogoImage src={logo} alt='logo' priority />
       <S.NavWrapper>
-       <S.StyledLink href={'/'} >
-        <S.StyledAiFillHome />
+       <S.StyledLink active={route.pathname === '/'} href={'/'} >
+        <S.StyledAiFillHome active={route.pathname === '/'} />
         Início</S.StyledLink>
-       <S.StyledLink href={'/favorites'} >
-       <S.StyledFaHeart />
+       <S.StyledLink active={route.pathname === '/favorites'} href={'/favorites'} >
+       <S.StyledFaHeart active={route.pathname === '/favorites'} />
         Favoritos</S.StyledLink>
       </S.NavWrapper>
       </S.LogoWrapper>

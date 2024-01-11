@@ -28,7 +28,7 @@ export const LogoImage = styled(Image)`
     height: 10rem; 
 `
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)<{active: boolean}>`
     display: flex; 
     margin-bottom: 2rem; 
     margin-left: 2rem;
@@ -37,7 +37,7 @@ export const StyledLink = styled(Link)`
     align-items: center; 
     font-size: 18px;
     font-weight: 700; 
-    color: #000; 
+    color: ${props => props.active ? "#B50DF5" : "#000"}; 
     text-decoration: none;
     letter-spacing: 1px;
 `
@@ -57,11 +57,11 @@ export const Menu = styled.div`
     }
 `
 
-export const StyledAiFillHome = styled(AiFillHome)`
+export const StyledAiFillHome = styled(AiFillHome)<{active: boolean}>`
     margin-right: 0.5rem; 
     width: 1.5rem; 
     height: 1.5rem; 
-    color: #000; 
+    color: ${props => props.active ? "#B50DF5" : "#000"}; 
 `
 
 
@@ -81,11 +81,11 @@ export const StyledHiOutlineMenu = styled(HiOutlineMenu)`
 `
 
 
-export const StyledFaHeart = styled(FaHeart)`
+export const StyledFaHeart = styled(FaHeart)<{active: boolean}>`
     margin-right: 0.5rem; 
     width: 1.5rem; 
     height: 1.5rem; 
-    color: #000; 
+    color: ${props => props.active ? "#B50DF5" : "#000"}; 
 `
 
 export const MenuMobile = styled.div<{isOpened: boolean}>`
