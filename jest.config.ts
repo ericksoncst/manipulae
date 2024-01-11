@@ -13,6 +13,7 @@ module.exports = {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
     ".+\\.(css|scss|png|jpg|svg)$": "jest-transform-stub"
   },
-  
-
+  testEnvironmentOptions: {
+    "url": "http://localhost:3006"
+  }
 }

@@ -1,4 +1,4 @@
-export default async function getCharts(req, res) {
+export default async function searchSong(req, res) {
 
     const { q } = req.query
 
