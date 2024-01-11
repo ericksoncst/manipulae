@@ -48,15 +48,15 @@ export const SongCard = ({song, isPlaying, activeSong, data, i }) => {
                     handlePlay={handlePlayClick}
                     />
                 </S.PlayPauseContainer>
-                <S.AlbumCover src={song?.album?.cover_medium} alt=""  />
+                <S.AlbumCover src={song?.album?.cover_medium} alt="album-cover"  />
             </S.PlayPauseWrapper>
             <S.InfoContainer >
             <S.StyledFaHeart color={checkIsFavorite() ? '#B50DF5' : '#CECECE'} onClick={saveToFavorites} />
             <S.ArtitsName>
-                    {song?.artist?.name}
+                    {song?.artist?.name || "Test Artist"}
             </S.ArtitsName>
             <S.SongTitle>
-                    {song?.title}
+                    {song?.title || "Test Song"}
             </S.SongTitle>
             </S.InfoContainer>
         </S.Container>

@@ -11,11 +11,13 @@ type PlayPauseProps = {
 
 const PlayPause = ({ isPlaying, activeSong, song, handlePause, handlePlay }: PlayPauseProps) => (isPlaying && activeSong?.title === song.title ? (
   <S.FPause
+  data-testid="play-songcard"
     size={35}
     onClick={handlePause}
   />
 ) : (
   <S.FPlay
+  data-testid="play-songcard"
     size={35}
     onClick={handlePlay}
   />
