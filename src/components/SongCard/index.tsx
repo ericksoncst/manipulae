@@ -53,10 +53,10 @@ export const SongCard = ({song, isPlaying, activeSong, data, i }) => {
             <S.InfoContainer >
             <S.StyledFaHeart color={checkIsFavorite() ? '#B50DF5' : '#CECECE'} onClick={saveToFavorites} />
             <S.ArtitsName>
-                    {song?.artist?.name || "Test Artist"}
+                    {song?.artist?.name}
             </S.ArtitsName>
             <S.SongTitle>
-                    {song?.title || "Test Song"}
+                    {song?.title}
             </S.SongTitle>
             </S.InfoContainer>
         </S.Container>
