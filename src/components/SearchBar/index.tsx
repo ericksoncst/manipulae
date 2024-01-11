@@ -9,7 +9,7 @@ export default function SearchBar({
     const route = useRouter()
 
     return (
-        <S.Form onSubmit={async (e)=> {
+        <S.Form data-testid="form" onSubmit={async (e)=> {
             e.preventDefault()
             route.push({
                 pathname: '/results',
@@ -22,6 +22,7 @@ export default function SearchBar({
             <S.InputWrapper>
                 <S.SearchIcon color="#4A235A" aria-hidden="true" />
                 <S.SearchInput 
+                    data-testid="form-input"
                     autoComplete="off"
                     id="search-field"
                     placeholder="Buscar músicas"

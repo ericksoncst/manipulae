@@ -27,6 +27,7 @@
     "@swc/plugin-styled-components": "^1.5.108",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.2",
     "@types/enzyme": "^3.10.18",
     "@types/node": "20.10.7",
     "@types/react": "18.2.47",
