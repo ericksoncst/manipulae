@@ -33,5 +33,5 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ]
+, "src/components/SearchBar/searchBar.test.ts"  ]
 }

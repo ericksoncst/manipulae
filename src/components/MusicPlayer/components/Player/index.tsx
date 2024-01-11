@@ -37,6 +37,7 @@ export function Player({
     //TODO: GET PLAY SRC
     return (
         <audio
+            data-testid='play-pause-button'
             src={activeSong?.preview}
             ref={ref}
             loop={repeat}
