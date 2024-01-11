@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -52,7 +53,7 @@ export const InfoContainer = styled.div`
     flex-direction: column; 
 `
 
-export const ArtitsName = styled.span`
+export const ArtitsName = styled(Link)`
     font-size: 14pxs;
     line-height: 1.75rem; 
     font-weight: 600; 
@@ -60,13 +61,15 @@ export const ArtitsName = styled.span`
     overflow: hidden;
     white-space: nowrap; 
     letter-spacing: 1px;
+    text-decoration: none;
 `
 
-export const SongTitle = styled.span`
+export const SongTitle = styled(Link)`
     font-size: 12px;
     color: #A9A9A9; 
     overflow: hidden;
     white-space: nowrap; 
+    text-decoration: none;
 `
 
 export const StyledFaHeart = styled(FaHeart).attrs(({ color }) => ({

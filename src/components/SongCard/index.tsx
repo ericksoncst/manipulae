@@ -3,6 +3,7 @@ import * as S from './style'
 import PlayPause from "components/PlayPause"
 import { useDispatch, useSelector } from "react-redux";
 import { playPause, setActiveSong, setFavorites } from "redux/features/playerSlice";
+import Link from "next/link";
 
 export const SongCard = ({song, isPlaying, activeSong, data, i }) => {
 
@@ -36,6 +37,10 @@ export const SongCard = ({song, isPlaying, activeSong, data, i }) => {
         })
     }
 
+    function getSongDetail(id: number) {
+        <Link href={`https://www.deezer.com/track/${id}`} passHref/>
+    }
+
     return (
         <S.Container>
             <S.PlayPauseWrapper>
@@ -52,10 +57,10 @@ export const SongCard = ({song, isPlaying, activeSong, data, i }) => {
             </S.PlayPauseWrapper>
             <S.InfoContainer >
             <S.StyledFaHeart color={checkIsFavorite() ? '#B50DF5' : '#CECECE'} onClick={saveToFavorites} />
-            <S.ArtitsName>
+            <S.ArtitsName href={`https://www.deezer.com/track/${song?.id}`}>
                     {song?.artist?.name}
             </S.ArtitsName>
-            <S.SongTitle>
+            <S.SongTitle href={`https://www.deezer.com/track/${song?.id}`}>
                     {song?.title}
             </S.SongTitle>
             </S.InfoContainer>
